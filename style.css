@@ -1,0 +1,317 @@
+/* =====================================================
+   JONIBEK RAYIMOV - SHAXSIY WEB DASTUR
+   style.css
+   ===================================================== */
+/* =====================================================
+   1. BUTUN SAHIFA (BODY)
+   ===================================================== */
+body {
+    /* Brauzerning standart tashqi bo'sh joyini olib tashlaydi */
+    margin: 0;
+    /* Sahifa kamida ekran balandligicha bo'ladi */
+    min-height: 100vh;
+    /* Elementlarni markazga joylashtirish uchun Flex ishlatamiz */
+    display: flex;
+    /* Gorizontal bo'yicha markaz */
+    justify-content: center;
+    /* Vertikal bo'yicha markaz */
+    align-items: center;
+    /* =================================================
+       ORQA FON RASMI
+       ================================================= */
+    /* images papkasidagi background.jpg rasmini fon qilamiz */
+    background-image: url("images/background.jpg");
+    /* Rasm butun ekranni qoplaydi */
+    background-size: cover;
+    /* Rasm markazdan joylashadi */
+    background-position: center;
+    /* Rasm qayta-qayta takrorlanmaydi */
+    background-repeat: no-repeat;
+    /* Asosiy matn rangi */
+    color: white;
+    /* Sahifadagi barcha matn uchun shrift */
+    font-family: Arial, sans-serif;
+}
+/* =====================================================
+   2. PROFIL KARTASI
+   ===================================================== */
+.profile {
+    /* Profil kartasining kengligi */
+    width: 350px;
+    /* Ichki bo'sh joy */
+    padding: 40px;
+    /* Matnlarni markazga joylashtirish */
+    text-align: center;
+    /* =================================================
+       SHARKLILIK / GLASS EFFECT
+       ================================================= */
+    /* Qora rang, lekin 55% shaffof */
+    background: rgba(0, 5, 14, 0.55);
+    /* Burchaklarni yumaloq qilish */
+    border-radius: 20px;
+    /* Orqa fonni biroz xiralashtirish */
+    backdrop-filter: blur(10px);
+    /* Kartaga nozik oq chegara */
+    border: 1px solid rgba(210, 16, 16, 0.2);
+    /* Kartaga soya berish */
+    box-shadow: 0 10px 7cm rgba(0, 0, 0, 0.5);
+}
+/* =====================================================
+   3. PROFIL RASMI JOYLASHADIGAN JOY
+   ===================================================== */
+.avatar {
+    /* Rasmning kengligi */
+    width: 120px;
+    /* Rasmning balandligi */
+    height: 120px;
+    /* Rasmni markazga joylashtirish */
+    margin: auto;
+    /* Rasmni doira shakliga keltirish */
+    border-radius: 50%;
+    /* Doiradan tashqariga chiqib ketgan
+       qismlarni yashirish */
+    overflow: hidden;
+    /* Rasm atrofidagi chegara */
+    border: 4px solid rgb(221, 8, 8);
+}
+/* =====================================================
+   4. PROFIL RASMINING O'ZI
+   ===================================================== */
+.avatar img {
+    /* Rasm ota elementning 100% kengligini egallaydi */
+    width: 100%;
+    /* Rasm ota elementning 100% balandligini egallaydi */
+    height: 100%;
+    /* Rasmni doira ichiga chiroyli joylashtiradi */
+    object-fit: cover;
+}
+/* =====================================================
+   5. ISM
+   ===================================================== */
+.profile h1 {
+    /* Ismning pastki qismidagi bo'sh joy */
+    margin-bottom: 10px;
+    /* Ism shriftining o'lchami */
+    font-size: 28px;
+    /* Ism rangi */
+    color: rgb(233, 235, 229);
+}
+/* =====================================================
+   6. BIO / QISQA MA'LUMOT
+   ===================================================== */
+.profile p {
+    /* Matn rangini biroz kulrang qilamiz */
+    color: #eadede;
+    /* Matn o'lchami */
+    font-size: 16px;
+    /* Yuqori va pastki bo'sh joy */
+    margin-bottom: 20px;
+}
+/* =====================================================
+   7. BARCHA TUGMALAR
+   ===================================================== */
+button {
+    /* Tugmaning kengligi profil kartasiga teng */
+    width: 100%;
+    /* Tugmaning balandligi va ichki bo'shligi */
+    padding: 12px;
+    /* Tugmalar orasidagi masofa */
+    margin-top: 10px;
+    /* Standart chegara */
+    border: none;
+    /* Tugma burchaklarini yumaloqlash */
+    border-radius: 100px;
+    /* Tugma foni */
+    background-color: cyan;
+    /* Tugma ichidagi matn rangi */
+    color: black;
+    /* Matn o'lchami */
+    font-size: 16px;
+    /* Matnni qalinroq qilish */
+    font-weight: bold;
+    /* Sichqoncha olib borilganda qo'lcha paydo bo'ladi */
+    cursor: pointer;
+    /* Animatsiya uchun */
+    transition: 0.3s;
+}
+/* =====================================================
+   8. TUGMA USTIGA SICHQONCHA OLIB BORILGANDA
+   ===================================================== */
+button:hover {
+    /* Tugma biroz yuqoriga ko'tariladi */
+    transform: translateY(-3px);
+    /* Tugma soyasi */
+    box-shadow: 0 5px 20px rgba(0, 255, 255, 0.4);
+    /* Tugma biroz yorqinroq bo'ladi */
+    background-color: #00ffff;
+}
+/* =====================================================
+   9. TUGMA BOSILGAN PAYT
+   ===================================================== */
+button:active {
+    /* Tugma biroz pastga tushadi */
+    transform: translateY(0);
+}
+/* =====================================================
+   10. TELEFON VA KICHIK EKRANLAR UCHUN
+   ===================================================== */
+@media (max-width: 500px) {
+    /* Kichik ekranda profil kartasi */
+    .profile {
+        /* Ekranga moslashadi */
+        width: 80%;
+        /* Ichki bo'sh joy */
+        padding: 30px;
+    }
+    /* Telefonda ism biroz kichikroq */
+    .profile h1 {
+        font-size: 24px;
+    }
+    /* Telefonda profil rasmi */
+    .avatar {
+        width: 100px;
+        height: 100px;
+    }
+}
+/* ==================================================
+   LINK TUGMALAR
+   ================================================== */
+.button {
+    /* Oddiy link ko‘rinishini olib tashlaymiz */
+    text-decoration: none;
+    /* Tugma kabi ko‘rinishi uchun */
+    display: block;
+    /* Tugma kengligi */
+    width: 100%;
+    /* Ichki masofa */
+    padding: 14px;
+    /* Yuqoridan masofa */
+    margin-top: 12px;
+    /* Burchaklarni yumaloqlash */
+    border-radius: 12px;
+    /* Fon */
+    background: rgb(33, 107, 171);
+    /* Matn */
+    color: rgb(25, 2, 2);
+    /* Qalin matn */
+    font-weight: bold;
+    /* Matn o‘lchami */
+    font-size: 16px;
+    /* Element o‘lchamlarini to‘g‘ri hisoblash */
+    box-sizing: border-box;
+    /* Animatsiya */
+    transition: all 0.3s ease;
+}
+/* Sichqoncha ustiga kelganda */
+.button:hover {
+    /* Yuqoriga biroz ko‘tariladi */
+    transform: translateY(-3px);
+    /* Soya */
+    box-shadow:
+        0 8px 20px rgba(0, 255, 255, 0.4);
+}/* ==================================================
+   MEN HAQIMDA OYNASI
+   ================================================== */
+.modal {
+    /* Dastlab oyna ko'rinmaydi */
+    display: none;
+    /* Ekranning butun qismini egallaydi */
+    position: fixed;
+    /* Barcha tomonlardan 0 */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Oyna boshqa elementlarning ustida turadi */
+    z-index: 1000;
+    /* Orqa fonni qoraytiradi */
+    background: rgba(0, 0, 0, 0.75);
+    /* Ichidagi oynani markazga joylashtirish */
+    justify-content: center;
+    align-items: center;
+    /* Ichkaridagi blur effekti */
+    backdrop-filter: blur(5px);
+}
+/* Oynaning ichki qismi */
+.modal-content {
+    /* Kenglik */
+    width: 450px;
+    /* Maksimal kenglik */
+    max-width: 85%;
+    /* Ichki masofa */
+    padding: 30px;
+    /* Fon */
+    background: #222;
+    /* Burchak */
+    border-radius: 20px;
+    /* Matn */
+    color: white;
+    /* Soya */
+    box-shadow:
+        0 10px 50px rgba(0, 0, 0, 0.7);
+    /* Nisbiy joylashuv */
+    position: relative;
+}
+/* Oyna sarlavhasi */
+.modal-content h2 {
+    text-align: center;
+    color: cyan;
+    margin-bottom: 25px;
+}
+/* Ma'lumot matnlari */
+.modal-content p {
+    color: #ddd;
+    line-height: 1.6;
+    margin: 12px 0;
+}
+/* X tugmasi */
+.close {
+    /* O'ng yuqorida turadi */
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    /* O'lchami */
+    font-size: 35px;
+    /* Rangi */
+    color: white;
+    /* Sichqoncha */
+    cursor: pointer;
+    /* Animatsiya */
+    transition: 0.3s;
+}
+/* X ustiga sichqoncha kelganda */
+.close:hover {
+    color: rgb(121, 191, 191);
+    transform: scale(1.2);
+}
+/* Telefon uchun */
+@media (max-width: 500px) {
+    .modal-content {
+        width: 85%;
+        padding: 25px 20px;
+    }
+}/* =================================
+   LOYIHALAR
+   ================================= */
+.project {
+    padding: 15px;
+    margin-top: 15px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    border-left: 3px solid cyan;
+    transition: 0.3s;
+}
+.project:hover {
+    transform: translateX(5px);
+    background: rgba(93, 193, 193, 0.08);
+}
+.project h3 {
+    margin: 0 0 8px;
+    color: rgb(76, 183, 197);
+    font-size: 18px;
+}
+.project p {
+    margin: 0;
+    color: #f3e9e9;
+    line-height: 1.5;
+}
